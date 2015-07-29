@@ -9,6 +9,8 @@ import (
 )
 
 type Config struct {
+	Url      string
+	Hostname string
 	Username string
 	Password string
 }
@@ -30,7 +32,7 @@ func main() {
 
 	// fmt.Printf("Value: %#v\n", string(config.Password))
 
-	resp, err := http.Get("http://" + config.Username + ":" + config.Password + "@cp.acs.li/nic/update?hostname=casa.genar.me")
+	resp, err := http.Get("http://" + config.Username + ":" + config.Password + "@" + config.Url + "?hostname=" + config.Hostname)
 
 	if err != nil {
 		fmt.Printf("Some error ocurred")

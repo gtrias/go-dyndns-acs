@@ -1,2 +1,4 @@
-username: yourusername
-password: yourpassword
+url: cp.acs.li/nic/update
+hostname: your_dyn_dns
+username: your_username
+password: your_password
